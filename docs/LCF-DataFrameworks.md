@@ -2,6 +2,7 @@
 title: Library Data Communication Framework for Terminal Applications (LCF)
 menu: Library Data Communication Framework for Terminal Applications
 weight: 1
+pdf: true
 ---
 
 # Book Industry Communication
