@@ -167,15 +167,15 @@ An identified manifestation of an abstract work, e.g. a book, magazine, newspape
 |------------|----------------------------|-----------|----------|------------|--------------------------------|
 | **E01D01** | **Identifier**             |           | **1**[4](#Notes)                                                    | **String** | **The LCF identifier used when referring to this manifestation entity.**                                                          |
 | *E01C02*   | *Additional identifier*    |           | 1-n      |            | Composite element containing details of an additional identifier for the manifestation.                                                             |
-| E01D02.1   | Identifier type            |           | 1        | Code       | LCF code list **[MNI](LCF-CodeLists#MNI)**          |
+| E01D02.1   | Identifier type            |           | 1        | Code       | LCF code list **[MNI](LCF-CodeLists.md#MNI)**          |
 | E01D02.2   | Identifier type name       |           | 0-1      | String     | If the identification scheme is proprietary, the name of the scheme.                                                                           |
 | E01D02.3   | Identifier value           |           | 1        | String     | The identifier string.         |
 | *E01C03*   | *Media type / format*      | CK        | 0-n      |            |                                |
-| E01D03.1   | Media type / format scheme |           | 1        | Code       | LCF code list **[MES](LCF-CodeLists#MES)**<br/>Allowed values to include ONIX code lists 150 and 175, SIP2 media type and proprietary                                 |
+| E01D03.1   | Media type / format scheme |           | 1        | Code       | LCF code list **[MES](LCF-CodeLists.md#MES)**<br/>Allowed values to include ONIX code lists 150 and 175, SIP2 media type and proprietary                                 |
 | E01D03.2   | Scheme name                |           | 0-1      | String     | Name or description of proprietary scheme                                                                                                         |
 | E01D03.3   | Scheme code                |           | 1        | String     | Code from the specified scheme |
 | *E01C04*   | *Title*                    | AJ        | 0-n      |            | Composite element containing a title of the manifestation. Repeatable for multiple types of title (e.g. full title, abbreviated title)              |
-| E01D04.1   | Title type                 |           | 1        | Code       | LCF code list **[TTL](LCF-CodeLists#TTL)**          |
+| E01D04.1   | Title type                 |           | 1        | Code       | LCF code list **[TTL](LCF-CodeLists.md#TTL)**          |
 | E01D04.2   | Title text                 |           | 1        | String     |                                |
 | E01D04.3   | Subtitle                   |           | 0-1      | String     |                                |
 | *E01C05*   | *Contributor*              |           | 0-n      |            | Composite element containing author or other contributor. Repeatable for multiple contributors.                                                    |
