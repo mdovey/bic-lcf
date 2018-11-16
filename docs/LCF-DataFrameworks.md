@@ -168,24 +168,24 @@ An identified manifestation of an abstract work, e.g. a book, magazine, newspape
 |------------|----------------------------|-----------|----------|------------|--------------------------------|
 | **E01D01** | **Identifier**             |           | **1**[4](#Notes)                                                    | **String** | **The LCF identifier used when referring to this manifestation entity.**                                                          |
 | *E01C02*   | *Additional identifier*    |           | 1-n      |            | Composite element containing details of an additional identifier for the manifestation.                                                             |
-| E01D02.1   | Identifier type            |           | 1        | Code       | LCF code list **[MNI](LCF-CodeLists#MNI)**          |
+| E01D02.1   | Identifier type            |           | 1        | Code       | -> LCF code list **[MNI](LCF-CodeLists.md#MNI)**          |
 | E01D02.2   | Identifier type name       |           | 0-1      | String     | If the identification scheme is proprietary, the name of the scheme.                                                                           |
 | E01D02.3   | Identifier value           |           | 1        | String     | The identifier string.         |
 | *E01C03*   | *Media type / format*      | CK        | 0-n      |            |                                |
-| E01D03.1   | Media type / format scheme |           | 1        | Code       | LCF code list **[MES](LCF-CodeLists#MES)**<br/>Allowed values to include ONIX code lists 150 and 175, SIP2 media type and proprietary                                 |
+| E01D03.1   | Media type / format scheme |           | 1        | Code       | -> LCF code list **[MES](LCF-CodeLists.md#MES)**<br/>Allowed values to include ONIX code lists 150 and 175, SIP2 media type and proprietary                                 |
 | E01D03.2   | Scheme name                |           | 0-1      | String     | Name or description of proprietary scheme                                                                                                         |
 | E01D03.3   | Scheme code                |           | 1        | String     | Code from the specified scheme |
 | *E01C04*   | *Title*                    | AJ        | 0-n      |            | Composite element containing a title of the manifestation. Repeatable for multiple types of title (e.g. full title, abbreviated title)              |
-| E01D04.1   | Title type                 |           | 1        | Code       | LCF code list **[TTL](LCF-CodeLists#TTL)**          |
+| E01D04.1   | Title type                 |           | 1        | Code       | -> LCF code list **[TTL](LCF-CodeLists.md#TTL)**          |
 | E01D04.2   | Title text                 |           | 1        | String     |                                |
 | E01D04.3   | Subtitle                   |           | 0-1      | String     |                                |
 | *E01C05*   | *Contributor*              |           | 0-n      |            | Composite element containing author or other contributor. Repeatable for multiple contributors.                                                    |
 | E01D05.1   | Contributor role           |           | 1        | Code       | Contributor role code from ONIX Code List 17[5](#Notes).                                                                        |
 | E01D05.2   | Contributor name           |           | 0-1      | String     | Either a contributor name or an unnamed contributor code must be included in each item contributor composite.                                  |
-| E01D05.3   | Unnamed contributor        |           | 0-1      | Code       | LCF code list **[UNC](LCF-CodeLists#UNC)**          |
+| E01D05.3   | Unnamed contributor        |           | 0-1      | Code       | -> LCF code list **[UNC](LCF-CodeLists.md#UNC)**          |
 | *E01C06*   | *Series*                   |           | 0-1      |            | Composite element containing information about a series of which this manifestation is a member.                                            |
 | *E01C06.1* | *Series title*             |           | 0-n      |            | Composite element containing the title of the series. Repeatable for multiple types of title.                                                   |
-| E01D06.1.1 | Title type                 |           | 1        | Code       | LCF code list **[TTL](LCF-CodeLists#TTL)**          |
+| E01D06.1.1 | Title type                 |           | 1        | Code       | -> LCF code list **[TTL](LCF-CodeLists.md#TTL)**          |
 | E01D06.1.2 | Title text                 |           | 1        | String     |                                |
 | E01D06.1.3 | Subtitle                   |           | 0-1      | String     |                                |
 | E01D06.2   | Volume or part             |           | 0-1      | String     | Volume or part number within series                                                                                                         |
@@ -282,14 +282,14 @@ NOTE – Contact information is held in separate contact records for security an
 | **E03D01** | **Identifier**             | **AA**    | **1**[4](#Notes)                                                    | **String** | **The LCF entity identifier normally used when referring to this patron.**                                                                          |
 | E03D26     | Barcode identifier         |           | 0-1      | String     | The identifier on the patron's library card. Mandatory unless the LCF entity identifier is the same identifier.<br/>*Added v1.0.1*            |
 | *E03C27*   | *Additional identifier*    |           | 0-n      |            | Composite element containing details of an additional identifier for this patron.<br/>*Added v1.0.1*                                                |
-| E03D27.1   | Identifier type            |           | 1        | Code       | LCF code list **[PNI](LCF-CodeLists#PNI)**<br/>The identification scheme.                                                                                         |
+| E03D27.1   | Identifier type            |           | 1        | Code       | LCF code list **[PNI](LCF-CodeLists.md#PNI)**<br/>The identification scheme.                                                                                         |
 | E02D27.2   | Identifier type name       |           | 0-1      | String     | If the identification scheme is proprietary, the name of the scheme.                                                                           |
 | E02D27.3   | Identifier value           |           | 1        | String     | The identifier string.         |
 | **E03D22** | **Name**                   | **AE**    | **1**    | **String** | **Name of primary contact for this patron.**<br/>*Added v1.0.1*                                                                                   |
 | E03D02     | Contact reference          |           | 0-n      | String     | Contact details for this patron<br/>*Repeatable v1.0.1*                                                                                 |
 | E03D23     | Language                   |           | 0-1      | Code       | Language for communication with primary contact<br/>ISO three-letter language code, e.g. ‘eng’<br/>*Added v1.0.1*                              |
 | *E03C03*   | *Associated location*      |           | 0-n      |            | A location associated with this patron.                                                                                                        |
-| E03D03.1   | Location association type  |           | 1        | Code       | LCF code list **[LAT](LCF-CodeLists#LAT)**          |
+| E03D03.1   | Location association type  |           | 1        | Code       | LCF code list **[LAT](LCF-CodeLists.md#LAT)**          |
 | E03D03.2   | Location reference         |           | 1        | String     | *Cardinality corrected in v1.0.1* |
 | E03D34     | Patron's home institution  |           | 0-1      | String     | Patron's home library/institution as represented by an Authority / Institution entity (E14)<br/>*(Added v1.0.1)*                                    |
 | E03D04     | Patron status              |           | 0-nR     | Code       | LCF code list **[PNS](LCF-CodeLists#PNS)**              |
